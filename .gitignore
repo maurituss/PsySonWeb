@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# non-project files
+*.php
+*.zip
+*.html
+propuesta-openfarma-programa.md
+americars_results/
+mongodb_ext/
+scratch-win-deploy/
+.claude/
+.mcp.json
