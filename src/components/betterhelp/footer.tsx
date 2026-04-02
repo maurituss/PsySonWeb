@@ -27,10 +27,10 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
           <div className="max-w-sm">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-full bg-[var(--teal)] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-full bg-[var(--psyson-celeste)] flex items-center justify-center">
                 <span className="text-white font-bold text-base">P</span>
               </div>
-              <span className="font-display font-bold text-xl text-[var(--navy)]">PsySon</span>
+              <span className="font-display font-bold text-xl text-[var(--psyson-azul-oscuro)]">PsySon</span>
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
               Salud mental corporativa con proposito. Acompanamos a
@@ -46,7 +46,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.producto.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-gray-500 hover:text-[var(--teal)] transition-colors">
+                    <Link href={link.href} className="text-sm text-gray-500 hover:text-[var(--psyson-celeste)] transition-colors">
                       {link.label}
                     </Link>
                   </li>
@@ -60,7 +60,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.empresa.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-gray-500 hover:text-[var(--teal)] transition-colors">
+                    <Link href={link.href} className="text-sm text-gray-500 hover:text-[var(--psyson-celeste)] transition-colors">
                       {link.label}
                     </Link>
                   </li>
@@ -74,7 +74,7 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-gray-500 hover:text-[var(--teal)] transition-colors">
+                    <Link href={link.href} className="text-sm text-gray-500 hover:text-[var(--psyson-celeste)] transition-colors">
                       {link.label}
                     </Link>
                   </li>

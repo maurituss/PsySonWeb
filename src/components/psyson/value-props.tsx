@@ -1,5 +1,6 @@
 import { UserPlus, Users, ShieldCheck, BookOpen } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 const values = [
   {
@@ -44,6 +45,22 @@ export function ValueProps() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
             PsySon combina atencion profesional, privacidad y coherencia espiritual
           </h2>
+        </div>
+
+        <div className="relative rounded-3xl overflow-hidden mb-10">
+          <Image
+            src="/images/team-wellness.jpg"
+            alt="Equipo corporativo colaborando"
+            width={1200}
+            height={400}
+            className="w-full h-64 object-cover rounded-3xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+          <div className="absolute bottom-6 left-6 right-6">
+            <p className="text-foreground font-semibold text-lg">
+              Un programa integral para el bienestar de tu equipo
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">

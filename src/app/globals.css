@@ -38,14 +38,15 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* PsySon Custom Tokens */
-  --navy: oklch(0.18 0.04 250);
-  --navy-light: oklch(0.22 0.04 250);
-  --teal: oklch(0.55 0.15 175);
-  --teal-light: oklch(0.92 0.04 175);
-  --teal-dark: oklch(0.40 0.12 175);
-  --warm-bg: oklch(0.98 0.008 85);
-  --warm-bg-alt: oklch(0.96 0.012 85);
+  /* PsySon Brand Tokens */
+  --psyson-celeste: #4A97EF;
+  --psyson-verde: #65DADC;
+  --psyson-azul-oscuro: #293151;
+  --psyson-azul-claro: #314D82;
+  --psyson-celeste-light: #e8f1fd;
+  --psyson-verde-light: #e0f7f7;
+  --warm-bg: #f8fafb;
+  --warm-bg-alt: #f0f5f8;
 }
 
 .dark {
@@ -84,8 +85,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-inter), 'Inter', system-ui, sans-serif;
-  --font-display: var(--font-display), 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-sans: var(--font-poppins), 'Poppins', system-ui, sans-serif;
+  --font-display: var(--font-poppins), 'Poppins', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);

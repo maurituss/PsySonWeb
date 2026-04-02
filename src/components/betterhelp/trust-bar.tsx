@@ -12,7 +12,7 @@ export function TrustBar() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-3xl sm:text-4xl font-bold text-[var(--teal)]">
+              <p className="text-3xl sm:text-4xl font-bold text-[var(--psyson-celeste)]">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm text-gray-500 font-medium">

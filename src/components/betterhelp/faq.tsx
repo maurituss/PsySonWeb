@@ -37,7 +37,7 @@ export function FAQ() {
   return (
     <section id="faq" className="py-20 px-6 bg-[var(--warm-bg)]">
       <div className="max-w-2xl mx-auto">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--navy)] text-center">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--psyson-azul-oscuro)] text-center">
           Preguntas frecuentes
         </h2>
         <p className="mt-4 text-gray-600 text-center text-lg">
@@ -54,7 +54,7 @@ export function FAQ() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-5 text-left"
               >
-                <span className="font-medium text-[var(--navy)] pr-4">{faq.q}</span>
+                <span className="font-medium text-[var(--psyson-azul-oscuro)] pr-4">{faq.q}</span>
                 <ChevronDown
                   className={cn(
                     "w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200",

@@ -1,4 +1,5 @@
 import { Check, Star, Shield, Calendar, MessageCircle, Lock } from "lucide-react"
+import Image from "next/image"
 
 const features = [
   "Agenda sesiones en segundos desde cualquier dispositivo",
@@ -38,9 +39,17 @@ export function Experience() {
             </ul>
           </div>
 
-          {/* Phone Mockup */}
-          <div className="flex justify-center">
-            <div className="w-[300px] bg-foreground rounded-[40px] p-3 shadow-2xl shadow-foreground/20">
+          {/* Phone Mockup with background image */}
+          <div className="flex justify-center relative">
+            <div className="absolute -inset-4 rounded-3xl overflow-hidden opacity-20">
+              <Image
+                src="/images/therapy-session.jpg"
+                alt="Sesion de terapia online"
+                fill
+                className="object-cover blur-sm"
+              />
+            </div>
+            <div className="relative w-[300px] bg-foreground rounded-[40px] p-3 shadow-2xl shadow-foreground/20">
               <div className="w-24 h-6 bg-foreground rounded-full mx-auto -mt-1 relative z-10" />
               <div className="bg-card rounded-[32px] overflow-hidden">
                 <div className="px-5 py-4">

@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 
 const steps = [
   {
@@ -55,6 +56,22 @@ export function Steps() {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
             Implementacion rapida y sin friccion
           </h2>
+        </div>
+
+        <div className="relative rounded-3xl overflow-hidden mb-12">
+          <Image
+            src="/images/family-support.jpg"
+            alt="Familia recibiendo apoyo emocional"
+            width={800}
+            height={300}
+            className="w-full h-48 object-cover rounded-3xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-accent/30 mix-blend-multiply" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <p className="text-white font-bold text-xl md:text-2xl text-center px-6 drop-shadow-lg">
+              Cobertura para colaboradores y sus familias
+            </p>
+          </div>
         </div>
 
         <div className="relative">

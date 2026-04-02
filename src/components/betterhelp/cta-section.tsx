@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react"
 
 export function CTASection() {
   return (
-    <section className="py-20 px-6 bg-[var(--navy)]">
+    <section className="py-20 px-6 bg-[var(--psyson-azul-oscuro)]">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-white leading-tight">
           Transforma el bienestar de tu organizacion
@@ -12,7 +12,7 @@ export function CTASection() {
           Sumate a las empresas que ya eligieron cuidar la salud mental de su equipo con PsySon.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button className="bg-[var(--teal)] hover:bg-[var(--teal-dark)] text-white rounded-full px-8 py-6 text-base font-semibold">
+          <Button className="bg-[var(--psyson-celeste)] hover:bg-[var(--psyson-azul-claro)] text-white rounded-full px-8 py-6 text-base font-semibold">
             Solicitar demo gratuita
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>

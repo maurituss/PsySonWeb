@@ -36,10 +36,10 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-full bg-[var(--teal)] flex items-center justify-center">
+            <div className="w-9 h-9 rounded-full bg-[var(--psyson-celeste)] flex items-center justify-center">
               <span className="text-white font-bold text-base">P</span>
             </div>
-            <span className="font-display font-bold text-xl text-[var(--navy)]">
+            <span className="font-display font-bold text-xl text-[var(--psyson-azul-oscuro)]">
               PsySon
             </span>
           </Link>
@@ -49,7 +49,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-[var(--teal)] transition-colors"
+                className="text-sm font-medium text-gray-600 hover:text-[var(--psyson-celeste)] transition-colors"
               >
                 {link.label}
               </Link>
@@ -57,10 +57,10 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" className="text-sm font-medium text-gray-700 hover:text-[var(--teal)]">
+            <Button variant="ghost" className="text-sm font-medium text-gray-700 hover:text-[var(--psyson-celeste)]">
               Iniciar sesion
             </Button>
-            <Button className="bg-[var(--teal)] hover:bg-[var(--teal-dark)] text-white rounded-full px-6 text-sm font-semibold">
+            <Button className="bg-[var(--psyson-celeste)] hover:bg-[var(--psyson-azul-claro)] text-white rounded-full px-6 text-sm font-semibold">
               Comenzar ahora
             </Button>
           </div>
@@ -86,7 +86,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 font-medium py-3 hover:text-[var(--teal)]"
+                className="text-gray-700 font-medium py-3 hover:text-[var(--psyson-celeste)]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}
@@ -96,7 +96,7 @@ export function Header() {
               <Button variant="outline" className="w-full rounded-full">
                 Iniciar sesion
               </Button>
-              <Button className="w-full bg-[var(--teal)] hover:bg-[var(--teal-dark)] text-white rounded-full">
+              <Button className="w-full bg-[var(--psyson-celeste)] hover:bg-[var(--psyson-azul-claro)] text-white rounded-full">
                 Comenzar ahora
               </Button>
             </div>

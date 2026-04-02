@@ -50,3 +50,5 @@ mongodb_ext/
 scratch-win-deploy/
 .claude/
 .mcp.json
+
+.vercel

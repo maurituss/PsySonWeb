@@ -31,7 +31,7 @@ export function Testimonials() {
   return (
     <section id="testimonios" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--navy)] text-center">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--psyson-azul-oscuro)] text-center">
           Lo que dicen nuestros clientes
         </h2>
         <p className="mt-4 text-gray-600 text-center text-lg">
@@ -53,11 +53,11 @@ export function Testimonials() {
                 &ldquo;{t.quote}&rdquo;
               </p>
               <div className="mt-6 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[var(--teal-light)] flex items-center justify-center text-[var(--teal-dark)] font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-[var(--psyson-celeste-light)] flex items-center justify-center text-[var(--psyson-azul-claro)] font-bold text-sm">
                   {t.name[0]}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-[var(--navy)]">{t.name}</p>
+                  <p className="text-sm font-semibold text-[var(--psyson-azul-oscuro)]">{t.name}</p>
                   <p className="text-xs text-gray-500">{t.role} · {t.company}</p>
                 </div>
               </div>

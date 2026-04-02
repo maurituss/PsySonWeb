@@ -15,7 +15,7 @@ export function PainPoints() {
   return (
     <section id="beneficios" className="py-20 px-6 bg-[var(--warm-bg)]">
       <div className="max-w-3xl mx-auto">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--navy)] text-center">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--psyson-azul-oscuro)] text-center">
           PsySon vs. terapia tradicional
         </h2>
         <p className="mt-4 text-gray-600 text-center text-lg">
@@ -26,7 +26,7 @@ export function PainPoints() {
           {/* Header */}
           <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
             <div className="p-4 text-sm font-semibold text-gray-500">Caracteristica</div>
-            <div className="p-4 text-sm font-bold text-[var(--teal)] text-center">PsySon</div>
+            <div className="p-4 text-sm font-bold text-[var(--psyson-celeste)] text-center">PsySon</div>
             <div className="p-4 text-sm font-semibold text-gray-500 text-center">Tradicional</div>
           </div>
           {/* Rows */}
@@ -38,7 +38,7 @@ export function PainPoints() {
               <div className="p-4 text-sm text-gray-700">{row.feature}</div>
               <div className="p-4 flex justify-center">
                 {row.psyson ? (
-                  <div className="w-6 h-6 rounded-full bg-[var(--teal)] flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--psyson-verde)] flex items-center justify-center">
                     <Check className="w-3.5 h-3.5 text-white" />
                   </div>
                 ) : (
@@ -49,7 +49,7 @@ export function PainPoints() {
               </div>
               <div className="p-4 flex justify-center">
                 {row.traditional ? (
-                  <div className="w-6 h-6 rounded-full bg-[var(--teal)] flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full bg-[var(--psyson-verde)] flex items-center justify-center">
                     <Check className="w-3.5 h-3.5 text-white" />
                   </div>
                 ) : (

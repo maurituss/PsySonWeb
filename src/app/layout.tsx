@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
+import { Poppins, Inter } from 'next/font/google'
 import './globals.css'
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: '--font-poppins'
+});
 
 const inter = Inter({
   subsets: ["latin"],
   variable: '--font-inter'
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: '--font-display'
 });
 
 export const metadata: Metadata = {
@@ -40,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${plusJakarta.variable}`}>
+    <html lang="es" className={`${poppins.variable} ${inter.variable}`}>
       <body className="font-sans antialiased">
         {children}
       </body>
