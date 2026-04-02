@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 function LinkedinIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -61,11 +62,14 @@ export function Footer() {
         <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
           {/* Brand */}
           <div className="max-w-sm">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">P</span>
-              </div>
-              <span className="font-semibold text-xl">PsySon</span>
+            <Link href="/" className="mb-4 inline-block">
+              <Image
+                src="/logo-horizontal.png"
+                alt="PsySon"
+                width={130}
+                height={38}
+                className="h-9 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed">
               Salud mental corporativa con enfoque cristiano. Acompanamos a 

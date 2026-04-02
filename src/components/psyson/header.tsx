@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -37,16 +38,18 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">P</span>
-            </div>
-            <span className={cn(
-              "font-semibold text-xl transition-colors",
-              isScrolled ? "text-foreground" : "text-white"
-            )}>
-              PsySon
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo-horizontal.png"
+              alt="PsySon"
+              width={140}
+              height={40}
+              className={cn(
+                "h-9 w-auto transition-all",
+                isScrolled ? "" : "brightness-0 invert"
+              )}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
