@@ -1,25 +1,24 @@
 import { Star } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-import Image from "next/image"
 
 const testimonials = [
   {
     quote: "PsySon nos dio tranquilidad. Sabemos que nuestros colaboradores tienen acceso a ayuda profesional alineada con nuestra mision como organizacion.",
     name: "Maria Gonzalez",
     role: "Directora de RRHH, Fundacion Esperanza",
-    image: "/images/testimonial-1.jpg",
+    initials: "MG",
   },
   {
     quote: "La adopcion fue altisima desde el primer mes. Los empleados agradecen tener un espacio confidencial con profesionales que entienden su fe.",
     name: "Carlos Rodriguez",
     role: "CEO, Editorial Gracia",
-    image: "/images/testimonial-2.jpg",
+    initials: "CR",
   },
   {
     quote: "El dashboard nos permite ver el impacto sin comprometer la privacidad. Finalmente podemos justificar la inversion con datos reales.",
     name: "Ana Martinez",
     role: "VP de Personas, ONG Luz del Mundo",
-    image: "/images/testimonial-3.jpg",
+    initials: "AM",
   },
 ]
 
@@ -56,13 +55,8 @@ export function Testimonials() {
                   {testimonial.quote}
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden relative flex-shrink-0">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                      className="object-cover"
-                    />
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                    <span className="text-sm font-bold text-white">{testimonial.initials}</span>
                   </div>
                   <div>
                     <p className="font-bold text-foreground">{testimonial.name}</p>

@@ -3,7 +3,6 @@
 import { useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Activity, Shield, CheckCircle } from "lucide-react"
-import Image from "next/image"
 
 export function Hero() {
   const statsRef = useRef<HTMLDivElement>(null)
@@ -46,14 +45,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[oklch(0.18_0.04_250)]">
       {/* Background Image + Effects */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero-therapy.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-15"
-          priority
-        />
-        <div className="absolute inset-0 bg-[oklch(0.18_0.04_250/0.85)]" />
+        <div className="absolute inset-0 bg-[oklch(0.18_0.04_250)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_40%,oklch(0.45_0.12_240/0.25),transparent_60%),radial-gradient(ellipse_50%_50%_at_20%_80%,oklch(0.65_0.14_175/0.15),transparent_50%)]" />
         <div className="absolute w-[500px] h-[500px] -top-[10%] -right-[5%] rounded-full bg-primary/30 blur-[100px]" />
         <div className="absolute w-[350px] h-[350px] -bottom-[15%] left-[5%] rounded-full bg-accent/30 blur-[80px]" />

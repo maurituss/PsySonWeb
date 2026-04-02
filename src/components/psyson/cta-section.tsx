@@ -1,19 +1,12 @@
-import Image from "next/image"
 import { LeadForm } from "@/components/psyson/lead-form"
 import { Shield, Clock, Users } from "lucide-react"
 
 export function CTASection() {
   return (
     <section id="contacto" className="py-24 px-6 bg-[oklch(0.18_0.04_250)] relative overflow-hidden">
-      {/* Background Image + Effects */}
+      {/* Background Effects */}
       <div className="absolute inset-0">
-        <Image
-          src="/images/peace-nature.jpg"
-          alt=""
-          fill
-          className="object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-[oklch(0.18_0.04_250/0.8)]" />
+        <div className="absolute inset-0 bg-[oklch(0.18_0.04_250)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_60%_at_50%_50%,oklch(0.45_0.12_240/0.2),transparent_60%),radial-gradient(ellipse_40%_40%_at_80%_20%,oklch(0.65_0.14_175/0.15),transparent_50%)]" />
       </div>
 
