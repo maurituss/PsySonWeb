@@ -15,11 +15,11 @@ export function CTASection() {
           {/* Left: Text content */}
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 text-balance">
-              Transforma el bienestar de tu organizacion
+              Transforma el bienestar de tu organización
             </h2>
             <p className="text-lg text-white/60 leading-relaxed mb-10 max-w-xl">
-              Agenda una demo personalizada y descubre como PsySon puede
-              acompanar a tus colaboradores y sus familias.
+              Agenda una demo personalizada y descubre cómo PsySon puede
+              acompañar a tus colaboradores y sus familias.
             </p>
 
             <div className="space-y-5">
@@ -27,7 +27,7 @@ export function CTASection() {
                 <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
-                <p className="text-white/70 text-sm">Implementacion en menos de 2 semanas</p>
+                <p className="text-white/70 text-sm">Implementación en menos de 2 semanas</p>
               </div>
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center shrink-0">
@@ -39,7 +39,7 @@ export function CTASection() {
                 <div className="w-10 h-10 rounded-xl bg-accent/20 flex items-center justify-center shrink-0">
                   <Shield className="w-5 h-5 text-accent" />
                 </div>
-                <p className="text-white/70 text-sm">100% confidencial con encriptacion de grado bancario</p>
+                <p className="text-white/70 text-sm">100% confidencial con encriptación de grado bancario</p>
               </div>
             </div>
           </div>

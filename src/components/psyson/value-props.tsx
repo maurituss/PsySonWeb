@@ -5,28 +5,28 @@ const values = [
   {
     icon: UserPlus,
     title: "Terapia online con enfoque cristiano",
-    description: "Profesionales certificados que acompanan desde una cosmovision compartida.",
+    description: "Profesionales certificados que acompañan desde una cosmovisión compartida.",
     gradient: "from-blue-100 to-blue-50",
     iconColor: "text-primary",
   },
   {
     icon: Users,
     title: "Acceso para empleados y sus familias",
-    description: "Conyuge e hijos dependientes hasta los 25 anos incluidos en la cobertura.",
+    description: "Cónyuge e hijos dependientes hasta los 25 años incluidos en la cobertura.",
     gradient: "from-emerald-100 to-emerald-50",
     iconColor: "text-accent",
   },
   {
     icon: ShieldCheck,
-    title: "Reportes anonimos para la organizacion",
-    description: "Metricas agregadas sin comprometer la privacidad individual.",
+    title: "Reportes anónimos para la organización",
+    description: "Métricas agregadas sin comprometer la privacidad individual.",
     gradient: "from-indigo-100 to-indigo-50",
     iconColor: "text-indigo-600",
   },
   {
     icon: BookOpen,
-    title: "Formacion y asesoria para equipos y lideres",
-    description: "Capacitacion en salud emocional empresarial con valores cristianos.",
+    title: "Formación y asesoría para equipos y líderes",
+    description: "Capacitación en salud emocional empresarial con valores cristianos.",
     gradient: "from-amber-100 to-amber-50",
     iconColor: "text-amber-600",
   },
@@ -42,7 +42,7 @@ export function ValueProps() {
             Nuestra propuesta
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-            PsySon combina atencion profesional, privacidad y coherencia espiritual
+            PsySon combina atención profesional, privacidad y coherencia espiritual
           </h2>
         </div>
 
@@ -54,8 +54,8 @@ export function ValueProps() {
 
         <div className="grid md:grid-cols-2 gap-5">
           {values.map((value, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="group border-border hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <CardContent className="p-8 flex gap-5">

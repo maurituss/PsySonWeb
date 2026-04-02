@@ -6,24 +6,24 @@ import { cn } from "@/lib/utils"
 
 const faqs = [
   {
-    question: "¿Como se garantiza la confidencialidad?",
-    answer: "Toda la informacion clinica esta protegida con encriptacion de grado bancario. RRHH solo recibe datos agregados y anonimizados, nunca nombres ni detalles individuales.",
+    question: "¿Cómo se garantiza la confidencialidad?",
+    answer: "Toda la información clínica está protegida con encriptación de grado bancario. RRHH solo recibe datos agregados y anonimizados, nunca nombres ni detalles individuales.",
   },
   {
-    question: "¿Que incluye la cobertura familiar?",
-    answer: "Conyuge e hijos dependientes hasta 25 anos pueden acceder al mismo beneficio. Cada miembro tiene su propio perfil privado.",
+    question: "¿Qué incluye la cobertura familiar?",
+    answer: "Cónyuge e hijos dependientes hasta 25 años pueden acceder al mismo beneficio. Cada miembro tiene su propio perfil privado.",
   },
   {
-    question: "¿Cuanto tarda la implementacion?",
-    answer: "El proceso completo toma aproximadamente 2 semanas, incluyendo configuracion tecnica, materiales de comunicacion interna y capacitacion del equipo de RRHH.",
+    question: "¿Cuánto tarda la implementación?",
+    answer: "El proceso completo toma aproximadamente 2 semanas, incluyendo configuración técnica, materiales de comunicación interna y capacitación del equipo de RRHH.",
   },
   {
-    question: "¿Que pasa si un empleado necesita ayuda urgente?",
-    answer: "Contamos con linea de crisis 24/7 atendida por profesionales capacitados. Ademas, nuestro sistema detecta senales de alerta para activar protocolos de emergencia.",
+    question: "¿Qué pasa si un empleado necesita ayuda urgente?",
+    answer: "Contamos con línea de crisis 24/7 atendida por profesionales capacitados. Además, nuestro sistema detecta señales de alerta para activar protocolos de emergencia.",
   },
   {
-    question: "¿Como se asignan los terapeutas?",
-    answer: "Los usuarios pueden elegir su terapeuta segun especialidad, idioma, horario y enfoque pastoral. Tambien pueden cambiar de profesional en cualquier momento.",
+    question: "¿Cómo se asignan los terapeutas?",
+    answer: "Los usuarios pueden elegir su terapeuta según especialidad, idioma, horario y enfoque pastoral. También pueden cambiar de profesional en cualquier momento.",
   },
 ]
 
@@ -49,8 +49,8 @@ export function FAQ() {
               key={index}
               className={cn(
                 "border rounded-2xl overflow-hidden transition-all duration-300",
-                openIndex === index 
-                  ? "border-primary/30 shadow-lg shadow-primary/5" 
+                openIndex === index
+                  ? "border-primary/30 shadow-lg shadow-primary/5"
                   : "border-border hover:border-primary/20"
               )}
             >
@@ -63,8 +63,8 @@ export function FAQ() {
                 </span>
                 <div className={cn(
                   "w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300",
-                  openIndex === index 
-                    ? "bg-primary rotate-180" 
+                  openIndex === index
+                    ? "bg-primary rotate-180"
                     : "bg-secondary"
                 )}>
                   <ChevronDown className={cn(

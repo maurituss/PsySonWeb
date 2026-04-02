@@ -3,20 +3,20 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const testimonials = [
   {
-    quote: "PsySon nos dio tranquilidad. Sabemos que nuestros colaboradores tienen acceso a ayuda profesional alineada con nuestra mision como organizacion.",
-    name: "Maria Gonzalez",
-    role: "Directora de RRHH, Fundacion Esperanza",
+    quote: "PsySon nos dio tranquilidad. Sabemos que nuestros colaboradores tienen acceso a ayuda profesional alineada con nuestra misión como organización.",
+    name: "María González",
+    role: "Directora de RRHH, Fundación Esperanza",
     initials: "MG",
   },
   {
-    quote: "La adopcion fue altisima desde el primer mes. Los empleados agradecen tener un espacio confidencial con profesionales que entienden su fe.",
-    name: "Carlos Rodriguez",
+    quote: "La adopción fue altísima desde el primer mes. Los empleados agradecen tener un espacio confidencial con profesionales que entienden su fe.",
+    name: "Carlos Rodríguez",
     role: "CEO, Editorial Gracia",
     initials: "CR",
   },
   {
-    quote: "El dashboard nos permite ver el impacto sin comprometer la privacidad. Finalmente podemos justificar la inversion con datos reales.",
-    name: "Ana Martinez",
+    quote: "El dashboard nos permite ver el impacto sin comprometer la privacidad. Finalmente podemos justificar la inversión con datos reales.",
+    name: "Ana Martínez",
     role: "VP de Personas, ONG Luz del Mundo",
     initials: "AM",
   },
@@ -38,8 +38,8 @@ export function Testimonials() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="group relative border-border hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
             >
               <span className="absolute top-6 right-6 text-6xl text-primary/10 font-serif leading-none">

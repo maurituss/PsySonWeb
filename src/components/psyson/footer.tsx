@@ -31,21 +31,18 @@ function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
 
 const footerLinks = {
   producto: [
-    { label: "Para empresas", href: "#" },
-    { label: "Para empleados", href: "#" },
-    { label: "Precios", href: "#" },
-    { label: "Recursos", href: "#" },
+    { label: "Solución", href: "#solucion" },
+    { label: "Cómo funciona", href: "#como-funciona" },
+    { label: "Para quién", href: "#para-quien" },
+    { label: "FAQ", href: "#faq" },
   ],
   empresa: [
-    { label: "Nosotros", href: "#" },
-    { label: "Equipo", href: "#" },
-    { label: "Carreras", href: "#" },
-    { label: "Contacto", href: "#" },
+    { label: "Contacto", href: "#contacto" },
+    { label: "WhatsApp", href: "https://wa.me/19377055317" },
   ],
   legal: [
     { label: "Privacidad", href: "#" },
-    { label: "Terminos", href: "#" },
-    { label: "Cookies", href: "#" },
+    { label: "Términos", href: "#" },
   ],
 }
 
@@ -72,7 +69,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-white/40 text-sm leading-relaxed">
-              Salud mental corporativa con enfoque cristiano. Acompanamos a 
+              Salud mental corporativa con enfoque cristiano. Acompañamos a
               organizaciones y sus colaboradores en su bienestar integral.
             </p>
           </div>
@@ -86,8 +83,8 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.producto.map((link) => (
                   <li key={link.label}>
-                    <Link 
-                      href={link.href} 
+                    <Link
+                      href={link.href}
                       className="text-sm text-white/40 hover:text-white transition-colors"
                     >
                       {link.label}
@@ -103,8 +100,8 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.empresa.map((link) => (
                   <li key={link.label}>
-                    <Link 
-                      href={link.href} 
+                    <Link
+                      href={link.href}
                       className="text-sm text-white/40 hover:text-white transition-colors"
                     >
                       {link.label}
@@ -120,8 +117,8 @@ export function Footer() {
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.label}>
-                    <Link 
-                      href={link.href} 
+                    <Link
+                      href={link.href}
                       className="text-sm text-white/40 hover:text-white transition-colors"
                     >
                       {link.label}

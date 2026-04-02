@@ -49,7 +49,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_70%_40%,oklch(0.45_0.12_240/0.25),transparent_60%),radial-gradient(ellipse_50%_50%_at_20%_80%,oklch(0.65_0.14_175/0.15),transparent_50%)]" />
         <div className="absolute w-[500px] h-[500px] -top-[10%] -right-[5%] rounded-full bg-primary/30 blur-[100px]" />
         <div className="absolute w-[350px] h-[350px] -bottom-[15%] left-[5%] rounded-full bg-accent/30 blur-[80px]" />
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
@@ -70,28 +70,30 @@ export function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance">
-              Salud mental para tu organizacion,{" "}
+              Salud mental para tu organización,{" "}
               <span className="bg-gradient-to-r from-[oklch(0.75_0.12_175)] to-[oklch(0.65_0.14_175)] bg-clip-text text-transparent">
                 alineada con tus valores
               </span>
             </h1>
 
             <p className="text-lg text-white/60 leading-relaxed mb-10 max-w-xl">
-              Ofrece a tus colaboradores y sus familias acceso confidencial a atencion 
-              psicologica online con profesionales certificados por PsySon.
+              Ofrece a tus colaboradores y sus familias acceso confidencial a atención
+              psicológica online con profesionales certificados por PsySon.
             </p>
 
             <div className="flex flex-wrap gap-4 mb-12">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-xl shadow-primary/30 h-14 px-8 text-base"
+                onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Solicitar demo
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-white/20 text-white hover:bg-white/10 backdrop-blur-sm h-14 px-8 text-base"
+                onClick={() => document.getElementById("solucion")?.scrollIntoView({ behavior: "smooth" })}
               >
                 Conocer el programa
               </Button>
@@ -99,7 +101,7 @@ export function Hero() {
 
             <div className="pt-8 border-t border-white/10">
               <p className="text-sm text-white/50">
-                Presente en <strong className="text-white/80">119 paises</strong> · <strong className="text-white/80">+120 organizaciones</strong> confian en PsySon
+                Presente en <strong className="text-white/80">119 países</strong> · <strong className="text-white/80">+120 organizaciones</strong> confían en PsySon
               </p>
             </div>
           </div>
@@ -124,11 +126,11 @@ export function Hero() {
                 </div>
                 <div className="bg-white/[0.06] rounded-xl p-5 text-center">
                   <div className="text-3xl font-bold text-[oklch(0.75_0.12_175)]" data-count="92" data-suffix="%">0%</div>
-                  <div className="text-xs text-white/40 mt-1">Satisfaccion</div>
+                  <div className="text-xs text-white/40 mt-1">Satisfacción</div>
                 </div>
                 <div className="bg-white/[0.06] rounded-xl p-5 text-center">
                   <div className="text-3xl font-bold text-white" data-count="76" data-suffix="%">0%</div>
-                  <div className="text-xs text-white/40 mt-1">Adopcion</div>
+                  <div className="text-xs text-white/40 mt-1">Adopción</div>
                 </div>
               </div>
 
@@ -139,8 +141,8 @@ export function Hero() {
                     className="flex-1 rounded-t-md transition-all duration-1000"
                     style={{
                       height: `${height}%`,
-                      background: i % 2 === 0 
-                        ? "oklch(0.45 0.12 240)" 
+                      background: i % 2 === 0
+                        ? "oklch(0.45 0.12 240)"
                         : "oklch(0.65 0.14 175)"
                     }}
                   />
@@ -154,7 +156,7 @@ export function Hero() {
                 <CheckCircle className="w-5 h-5 text-emerald-400" />
               </div>
               <div>
-                <p className="text-white text-sm font-semibold">Sesion completada</p>
+                <p className="text-white text-sm font-semibold">Sesión completada</p>
                 <p className="text-white/50 text-xs">Hace 2 min</p>
               </div>
             </div>

@@ -3,9 +3,9 @@ import { Check, Star, Shield, Calendar, MessageCircle, Lock } from "lucide-react
 const features = [
   "Agenda sesiones en segundos desde cualquier dispositivo",
   "Elige terapeuta por especialidad, idioma o enfoque pastoral",
-  "Sesiones por videollamada, con opcion de chat entre citas",
-  "Recordatorios automaticos y reprogramacion sin penalidad",
-  "Tu historial clinico protegido con encriptacion de grado bancario",
+  "Sesiones por videollamada, con opción de chat entre citas",
+  "Recordatorios automáticos y reprogramación sin penalidad",
+  "Tu historial clínico protegido con encriptación de grado bancario",
   "Soporte humano 24/7 para urgencias emocionales",
 ]
 
@@ -55,7 +55,7 @@ export function Experience() {
                   {/* Next Session */}
                   <div className="mb-5">
                     <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-3">
-                      Proxima sesion
+                      Próxima sesión
                     </p>
                     <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-4 flex items-center gap-4">
                       <div className="bg-white/20 rounded-xl px-4 py-3 text-center">

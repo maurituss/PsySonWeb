@@ -5,12 +5,12 @@ const steps = [
   {
     number: 1,
     title: "Agenda una demo",
-    description: "Conversamos sobre las necesidades de tu organizacion y te mostramos la plataforma en vivo.",
+    description: "Conversamos sobre las necesidades de tu organización y te mostramos la plataforma en vivo.",
   },
   {
     number: 2,
     title: "Personalizamos tu plan",
-    description: "Definimos cobertura, numero de sesiones, idiomas y materiales de lanzamiento interno.",
+    description: "Definimos cobertura, número de sesiones, idiomas y materiales de lanzamiento interno.",
   },
   {
     number: 3,
@@ -49,10 +49,10 @@ export function Steps() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary mb-4">
             <span className="w-5 h-0.5 bg-primary rounded" />
-            Como funciona
+            Cómo funciona
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-            Implementacion rapida y sin friccion
+            Implementación rápida y sin fricción
           </h2>
         </div>
 
@@ -65,7 +65,7 @@ export function Steps() {
         <div className="relative">
           {/* Progress Line */}
           <div className="hidden md:block absolute top-10 left-[16%] right-[16%] h-1 bg-border rounded-full">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
               style={{ width: `${lineWidth}%` }}
             />

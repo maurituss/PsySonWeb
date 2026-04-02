@@ -1,11 +1,11 @@
 import { Monitor, Users, Shield, Clock, BookOpen, Globe } from "lucide-react"
 
 const trustItems = [
-  { icon: Monitor, label: "Atencion 100% online" },
+  { icon: Monitor, label: "Atención 100% online" },
   { icon: Users, label: "Colaboradores y familias" },
-  { icon: Shield, label: "Estadisticas anonimas" },
-  { icon: Clock, label: "Implementacion en 2 semanas" },
-  { icon: BookOpen, label: "Formacion para lideres" },
+  { icon: Shield, label: "Estadísticas anónimas" },
+  { icon: Clock, label: "Implementación en 2 semanas" },
+  { icon: BookOpen, label: "Formación para líderes" },
   { icon: Globe, label: "Cobertura internacional" },
 ]
 

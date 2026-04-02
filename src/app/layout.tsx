@@ -20,8 +20,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: 'PsySon Corporativo — Salud mental para tu organizacion',
-  description: 'Ofrece a tus colaboradores y sus familias acceso confidencial a atencion psicologica online con profesionales certificados por PsySon.',
+  title: 'PsySon Corporativo — Salud mental para tu organización',
+  description: 'Ofrece a tus colaboradores y sus familias acceso confidencial a atención psicológica online con profesionales certificados por PsySon.',
   icons: {
     icon: [
       {

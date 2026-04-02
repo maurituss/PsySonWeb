@@ -52,7 +52,7 @@ export function LeadForm() {
           Recibimos tu solicitud
         </h3>
         <p className="text-white/60 leading-relaxed">
-          Un asesor de PsySon se pondra en contacto contigo en las proximas 24 horas.
+          Un asesor de PsySon se pondrá en contacto contigo en las próximas 24 horas.
         </p>
       </div>
     )
@@ -64,7 +64,7 @@ export function LeadForm() {
         Solicita una demo gratuita
       </h3>
       <p className="text-white/50 text-sm mb-8">
-        Completa tus datos y te contactaremos para agendar una presentacion personalizada.
+        Completa tus datos y te contactaremos para agendar una presentación personalizada.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -83,7 +83,7 @@ export function LeadForm() {
           <Input
             name="telefono"
             type="tel"
-            placeholder="Telefono"
+            placeholder="Teléfono"
             required
             className="bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 h-12 pl-10 rounded-xl focus-visible:border-primary focus-visible:ring-primary/30"
           />
@@ -94,7 +94,7 @@ export function LeadForm() {
           <Input
             name="email"
             type="email"
-            placeholder="Correo electronico"
+            placeholder="Correo electrónico"
             required
             className="bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 h-12 pl-10 rounded-xl focus-visible:border-primary focus-visible:ring-primary/30"
           />
@@ -104,7 +104,7 @@ export function LeadForm() {
           <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/30" />
           <Input
             name="organizacion"
-            placeholder="Organizacion"
+            placeholder="Organización"
             required
             className="bg-white/[0.06] border-white/10 text-white placeholder:text-white/30 h-12 pl-10 rounded-xl focus-visible:border-primary focus-visible:ring-primary/30"
           />
@@ -132,7 +132,7 @@ export function LeadForm() {
       </form>
 
       <p className="text-white/30 text-xs text-center mt-6">
-        Tus datos estan protegidos. No compartimos tu informacion con terceros.
+        Tus datos están protegidos. No compartimos tu información con terceros.
       </p>
     </div>
   )

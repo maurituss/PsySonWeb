@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
+const WHATSAPP_URL = "https://wa.me/19377055317"
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -20,11 +22,15 @@ export function Header() {
   }, [])
 
   const navLinks = [
-    { href: "#solucion", label: "Solucion" },
-    { href: "#como-funciona", label: "Como funciona" },
-    { href: "#para-quien", label: "Para quien" },
+    { href: "#solucion", label: "Solución" },
+    { href: "#como-funciona", label: "Cómo funciona" },
+    { href: "#para-quien", label: "Para quién" },
     { href: "#faq", label: "FAQ" },
   ]
+
+  const scrollToContact = () => {
+    document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
+  }
 
   return (
     <header
@@ -73,16 +79,22 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <Button
               variant="ghost"
+              asChild
               className={cn(
                 "transition-colors",
-                isScrolled 
-                  ? "text-foreground hover:bg-secondary" 
+                isScrolled
+                  ? "text-foreground hover:bg-secondary"
                   : "text-white hover:bg-white/10"
               )}
             >
-              Hablar con asesor
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                Hablar con asesor
+              </a>
             </Button>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25">
+            <Button
+              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/25"
+              onClick={scrollToContact}
+            >
               Solicitar demo
             </Button>
           </div>
@@ -117,10 +129,18 @@ export function Header() {
               </Link>
             ))}
             <div className="flex flex-col gap-3 pt-4 border-t border-border">
-              <Button variant="outline" className="w-full">
-                Hablar con asesor
+              <Button variant="outline" className="w-full" asChild>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  Hablar con asesor
+                </a>
               </Button>
-              <Button className="w-full bg-primary hover:bg-primary/90">
+              <Button
+                className="w-full bg-primary hover:bg-primary/90"
+                onClick={() => {
+                  setIsMobileMenuOpen(false)
+                  scrollToContact()
+                }}
+              >
                 Solicitar demo
               </Button>
             </div>

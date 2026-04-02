@@ -5,13 +5,13 @@ import { Shield } from "lucide-react"
 
 const kpis = [
   { value: "248", label: "Sesiones totales", color: "text-foreground" },
-  { value: "92%", label: "Satisfaccion", color: "text-primary" },
-  { value: "76%", label: "Adopcion", color: "text-accent" },
+  { value: "92%", label: "Satisfacción", color: "text-primary" },
+  { value: "76%", label: "Adopción", color: "text-accent" },
 ]
 
 const chartData = [
   { label: "Ansiedad", value: 78, color: "from-primary to-primary/70" },
-  { label: "Estres laboral", value: 65, color: "from-accent to-accent/70" },
+  { label: "Estrés laboral", value: 65, color: "from-accent to-accent/70" },
   { label: "Relaciones", value: 52, color: "from-indigo-500 to-indigo-400" },
   { label: "Duelo", value: 38, color: "from-primary/70 to-blue-400" },
 ]
@@ -108,7 +108,7 @@ export function DashboardPreview() {
                 <div className="mt-6 bg-emerald-50 rounded-xl px-4 py-3 flex items-center gap-3">
                   <Shield className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                   <span className="text-sm text-emerald-700 font-medium">
-                    Datos agregados y anonimizados. Ningun nombre individual es visible.
+                    Datos agregados y anonimizados. Ningún nombre individual es visible.
                   </span>
                 </div>
               </div>
@@ -122,19 +122,19 @@ export function DashboardPreview() {
               Para RRHH
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-              Panel de gestion para Recursos Humanos
+              Panel de gestión para Recursos Humanos
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Visualiza el impacto del programa sin comprometer la confidencialidad. 
-              Metricas claras para tomar decisiones informadas sobre el bienestar de tu equipo.
+              Visualiza el impacto del programa sin comprometer la confidencialidad.
+              Métricas claras para tomar decisiones informadas sobre el bienestar de tu equipo.
             </p>
 
             <ul className="space-y-4">
               {[
-                "Metricas de uso y satisfaccion en tiempo real",
+                "Métricas de uso y satisfacción en tiempo real",
                 "Reportes descargables para directivos",
                 "Alertas de tendencias sin datos personales",
-                "Integracion con sistemas de RRHH existentes",
+                "Integración con sistemas de RRHH existentes",
               ].map((item, index) => (
                 <li key={index} className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary" />
