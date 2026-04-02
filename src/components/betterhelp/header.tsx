@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -35,13 +36,15 @@ export function Header() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-full bg-[var(--psyson-celeste)] flex items-center justify-center">
-              <span className="text-white font-bold text-base">P</span>
-            </div>
-            <span className="font-display font-bold text-xl text-[var(--psyson-azul-oscuro)]">
-              PsySon
-            </span>
+          <Link href="/v2" className="flex items-center">
+            <Image
+              src="/logo-horizontal.png"
+              alt="PsySon"
+              width={140}
+              height={40}
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-7">

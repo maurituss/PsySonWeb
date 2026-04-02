@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const footerLinks = {
   producto: [
@@ -26,11 +27,14 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-12 mb-12">
           <div className="max-w-sm">
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 rounded-full bg-[var(--psyson-celeste)] flex items-center justify-center">
-                <span className="text-white font-bold text-base">P</span>
-              </div>
-              <span className="font-display font-bold text-xl text-[var(--psyson-azul-oscuro)]">PsySon</span>
+            <Link href="/v2" className="mb-4 inline-block">
+              <Image
+                src="/logo-horizontal.png"
+                alt="PsySon"
+                width={130}
+                height={38}
+                className="h-9 w-auto"
+              />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed">
               Salud mental corporativa con proposito. Acompanamos a
