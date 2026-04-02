@@ -1,73 +1,67 @@
 import { Star } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
 
 const testimonials = [
   {
-    quote: "PsySon nos dio tranquilidad. Sabemos que nuestros colaboradores tienen acceso a ayuda profesional alineada con nuestra mision como organizacion.",
-    name: "Maria Gonzalez",
-    role: "Directora de RRHH, Fundacion Esperanza",
-    initials: "MG",
-    gradient: "from-primary to-primary/70",
+    name: "Carolina M.",
+    role: "Directora de RRHH",
+    company: "Empresa tecnologica, 450 empleados",
+    quote:
+      "PsySon fue un antes y un despues. La adopcion supero el 80% en el primer mes y el feedback de los equipos es increible.",
+    rating: 5,
   },
   {
-    quote: "La adopcion fue altisima desde el primer mes. Los empleados agradecen tener un espacio confidencial con profesionales que entienden su fe.",
-    name: "Carlos Rodriguez",
-    role: "CEO, Editorial Gracia",
-    initials: "CR",
-    gradient: "from-accent to-accent/70",
+    name: "Fernando L.",
+    role: "CEO",
+    company: "Agencia de marketing, 120 empleados",
+    quote:
+      "Queriamos un programa de salud mental que respetara los valores de nuestra cultura. PsySon fue la respuesta.",
+    rating: 5,
   },
   {
-    quote: "El dashboard nos permite ver el impacto sin comprometer la privacidad. Finalmente podemos justificar la inversion con datos reales.",
-    name: "Ana Martinez",
-    role: "VP de Personas, ONG Luz del Mundo",
-    initials: "AM",
-    gradient: "from-indigo-500 to-indigo-400",
+    name: "Lucia R.",
+    role: "Gerenta de People",
+    company: "Fintech, 300 empleados",
+    quote:
+      "El dashboard nos da visibilidad real sin comprometer la privacidad. Podemos medir el impacto y justificar la inversion.",
+    rating: 5,
   },
 ]
 
 export function Testimonials() {
   return (
-    <section className="py-24 px-6 bg-secondary/50">
+    <section id="testimonios" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary mb-4">
-            <span className="w-5 h-0.5 bg-primary rounded" />
-            Testimonios
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-            Lo que dicen nuestros clientes
-          </h2>
-        </div>
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--navy)] text-center">
+          Lo que dicen nuestros clientes
+        </h2>
+        <p className="mt-4 text-gray-600 text-center text-lg">
+          Empresas reales, resultados reales
+        </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index} 
-              className="group relative border-border hover:border-primary/20 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {testimonials.map((t) => (
+            <div
+              key={t.name}
+              className="bg-[var(--warm-bg)] rounded-2xl p-6 border border-gray-100"
             >
-              <span className="absolute top-6 right-6 text-6xl text-primary/10 font-serif leading-none">
-                &ldquo;
-              </span>
-              <CardContent className="p-8 relative">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                  ))}
+              <div className="flex gap-0.5 mb-4">
+                {Array.from({ length: t.rating }).map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                ))}
+              </div>
+              <p className="text-gray-700 leading-relaxed text-sm">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <div className="mt-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[var(--teal-light)] flex items-center justify-center text-[var(--teal-dark)] font-bold text-sm">
+                  {t.name[0]}
                 </div>
-                <p className="text-foreground leading-relaxed mb-8">
-                  {testimonial.quote}
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center`}>
-                    <span className="text-white font-bold">{testimonial.initials}</span>
-                  </div>
-                  <div>
-                    <p className="font-bold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                  </div>
+                <div>
+                  <p className="text-sm font-semibold text-[var(--navy)]">{t.name}</p>
+                  <p className="text-xs text-gray-500">{t.role} · {t.company}</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

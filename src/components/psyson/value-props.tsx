@@ -1,71 +1,57 @@
-import { UserPlus, Users, ShieldCheck, BookOpen } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
+import { Shield, Users, BarChart3, Heart } from "lucide-react"
 
-const values = [
+const features = [
   {
-    icon: UserPlus,
-    title: "Terapia online con enfoque cristiano",
-    description: "Profesionales certificados que acompanan desde una cosmovision compartida.",
-    gradient: "from-blue-100 to-blue-50",
-    iconColor: "text-primary",
+    icon: Heart,
+    title: "Terapia con proposito",
+    description:
+      "Profesionales que integran un enfoque basado en valores, brindando atencion con empatia y sentido.",
   },
   {
     icon: Users,
-    title: "Acceso para empleados y sus familias",
-    description: "Conyuge e hijos dependientes hasta los 25 anos incluidos en la cobertura.",
-    gradient: "from-emerald-100 to-emerald-50",
-    iconColor: "text-accent",
+    title: "Para toda la familia",
+    description:
+      "Tus colaboradores y sus familias acceden al mismo beneficio. Porque el bienestar no termina en la oficina.",
   },
   {
-    icon: ShieldCheck,
-    title: "Reportes anonimos para la organizacion",
-    description: "Metricas agregadas sin comprometer la privacidad individual.",
-    gradient: "from-indigo-100 to-indigo-50",
-    iconColor: "text-indigo-600",
+    icon: Shield,
+    title: "100% confidencial",
+    description:
+      "Ni la empresa ni RRHH acceden a datos personales. Solo reciben estadisticas anonimas y agregadas.",
   },
   {
-    icon: BookOpen,
-    title: "Formacion y asesoria para equipos y lideres",
-    description: "Capacitacion en salud emocional empresarial con valores cristianos.",
-    gradient: "from-amber-100 to-amber-50",
-    iconColor: "text-amber-600",
+    icon: BarChart3,
+    title: "Metricas para RRHH",
+    description:
+      "Dashboard en tiempo real con adopcion, satisfaccion y tendencias. Datos para tomar decisiones.",
   },
 ]
 
 export function ValueProps() {
   return (
-    <section className="py-24 px-6 bg-secondary/50">
+    <section id="para-quien" className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary mb-4">
-            <span className="w-5 h-0.5 bg-primary rounded" />
-            Nuestra propuesta
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
-            PsySon combina atencion profesional, privacidad y coherencia espiritual
-          </h2>
-        </div>
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--navy)] text-center">
+          Por que las empresas eligen PsySon
+        </h2>
+        <p className="mt-4 text-gray-600 text-center text-lg max-w-2xl mx-auto">
+          Un programa de bienestar mental disenado para organizaciones que cuidan a su gente
+        </p>
 
-        <div className="grid md:grid-cols-2 gap-5">
-          {values.map((value, index) => (
-            <Card 
-              key={index} 
-              className="group border-border hover:border-primary/20 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {features.map((feat) => (
+            <div
+              key={feat.title}
+              className="flex gap-5 p-6 rounded-2xl bg-[var(--warm-bg)] border border-gray-100"
             >
-              <CardContent className="p-8 flex gap-5">
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${value.gradient} flex items-center justify-center flex-shrink-0`}>
-                  <value.icon className={`w-6 h-6 ${value.iconColor}`} />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+              <div className="shrink-0 w-12 h-12 rounded-xl bg-[var(--teal-light)] flex items-center justify-center">
+                <feat.icon className="w-6 h-6 text-[var(--teal-dark)]" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg text-[var(--navy)]">{feat.title}</h3>
+                <p className="mt-2 text-sm text-gray-600 leading-relaxed">{feat.description}</p>
+              </div>
+            </div>
           ))}
         </div>
       </div>
