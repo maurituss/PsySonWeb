@@ -47,6 +47,16 @@
   --psyson-verde-light: #e0f7f7;
   --warm-bg: #f8fafb;
   --warm-bg-alt: #f0f5f8;
+
+  /* ProtegePsi Brand Tokens */
+  --pp-dark: #071E2D;
+  --pp-blue: #4D8DFF;
+  --pp-cyan: #62D7DC;
+  --pp-beige: #F3EFE4;
+  --pp-text-dark: #0E1726;
+  --pp-text-light: #F7FAFC;
+  --pp-dark-alt: #0A2A3D;
+  --pp-blue-muted: #3A6FCC;
 }
 
 .dark {
@@ -87,6 +97,7 @@
 @theme inline {
   --font-sans: var(--font-poppins), 'Poppins', system-ui, sans-serif;
   --font-display: var(--font-poppins), 'Poppins', system-ui, sans-serif;
+  --font-manrope: var(--font-manrope), 'Manrope', system-ui, sans-serif;
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);
   --color-foreground: var(--foreground);
