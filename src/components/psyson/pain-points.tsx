@@ -1,64 +1,57 @@
-import { Check, X } from "lucide-react"
+import { Link2, TrendingDown, Settings } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
 
-const rows = [
-  { feature: "Acceso inmediato sin listas de espera", psyson: true, traditional: false },
-  { feature: "Sesiones online desde cualquier lugar", psyson: true, traditional: false },
-  { feature: "Cobertura para familia del empleado", psyson: true, traditional: false },
-  { feature: "Reportes anonimos para RRHH", psyson: true, traditional: false },
-  { feature: "Terapeutas con enfoque de valores", psyson: true, traditional: false },
-  { feature: "Implementacion en 2 semanas", psyson: true, traditional: false },
-  { feature: "Costo por empleado accesible", psyson: true, traditional: false },
-  { feature: "Confidencialidad total", psyson: true, traditional: true },
+const painPoints = [
+  {
+    icon: Link2,
+    title: "Falta de afinidad cultural",
+    description: "Los colaboradores no siempre conectan con propuestas desconectadas de sus valores y cosmovision.",
+  },
+  {
+    icon: TrendingDown,
+    title: "Baja adopcion",
+    description: "Si el beneficio no genera confianza, la gente simplemente no lo usa y la inversion se pierde.",
+  },
+  {
+    icon: Settings,
+    title: "Complejidad operativa",
+    description: "RR.HH. necesita una solucion clara, confidencial y facil de administrar sin friccion.",
+  },
 ]
 
 export function PainPoints() {
   return (
-    <section id="beneficios" className="py-20 px-6 bg-[var(--warm-bg)]">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--navy)] text-center">
-          PsySon vs. terapia tradicional
-        </h2>
-        <p className="mt-4 text-gray-600 text-center text-lg">
-          Descubri por que las empresas eligen PsySon
-        </p>
+    <section id="solucion" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+            No alcanza con ofrecer cualquier solucion de salud mental
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed">
+            Muchas organizaciones quieren cuidar a su gente, pero encuentran opciones 
+            genericas, poco alineadas con su cultura o dificiles de implementar.
+          </p>
+        </div>
 
-        <div className="mt-12 bg-white rounded-2xl border border-gray-200 overflow-hidden">
-          {/* Header */}
-          <div className="grid grid-cols-3 bg-gray-50 border-b border-gray-200">
-            <div className="p-4 text-sm font-semibold text-gray-500">Caracteristica</div>
-            <div className="p-4 text-sm font-bold text-[var(--teal)] text-center">PsySon</div>
-            <div className="p-4 text-sm font-semibold text-gray-500 text-center">Tradicional</div>
-          </div>
-          {/* Rows */}
-          {rows.map((row, i) => (
-            <div
-              key={row.feature}
-              className={`grid grid-cols-3 ${i < rows.length - 1 ? "border-b border-gray-100" : ""}`}
+        <div className="grid md:grid-cols-3 gap-6">
+          {painPoints.map((pain, index) => (
+            <Card 
+              key={index} 
+              className="group relative border-border hover:border-destructive/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
             >
-              <div className="p-4 text-sm text-gray-700">{row.feature}</div>
-              <div className="p-4 flex justify-center">
-                {row.psyson ? (
-                  <div className="w-6 h-6 rounded-full bg-[var(--teal)] flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-white" />
-                  </div>
-                ) : (
-                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center">
-                    <X className="w-3.5 h-3.5 text-gray-400" />
-                  </div>
-                )}
-              </div>
-              <div className="p-4 flex justify-center">
-                {row.traditional ? (
-                  <div className="w-6 h-6 rounded-full bg-[var(--teal)] flex items-center justify-center">
-                    <Check className="w-3.5 h-3.5 text-white" />
-                  </div>
-                ) : (
-                  <div className="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center">
-                    <X className="w-3.5 h-3.5 text-gray-400" />
-                  </div>
-                )}
-              </div>
-            </div>
+              <div className="absolute top-0 left-6 right-6 h-1 bg-gradient-to-r from-destructive/80 to-destructive/40 rounded-b opacity-0 group-hover:opacity-100 transition-opacity" />
+              <CardContent className="p-8">
+                <div className="w-14 h-14 rounded-2xl bg-destructive/10 flex items-center justify-center mb-6">
+                  <pain.icon className="w-7 h-7 text-destructive" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-3">
+                  {pain.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {pain.description}
+                </p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

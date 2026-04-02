@@ -6,67 +6,81 @@ import { cn } from "@/lib/utils"
 
 const faqs = [
   {
-    q: "Es realmente confidencial?",
-    a: "Si. La empresa no tiene acceso a informacion personal de los usuarios. Solo recibe reportes anonimos y agregados sobre adopcion y satisfaccion general.",
+    question: "¿Como se garantiza la confidencialidad?",
+    answer: "Toda la informacion clinica esta protegida con encriptacion de grado bancario. RRHH solo recibe datos agregados y anonimizados, nunca nombres ni detalles individuales.",
   },
   {
-    q: "El beneficio cubre a la familia del empleado?",
-    a: "Si. Cada colaborador puede extender el beneficio a su nucleo familiar directo (pareja e hijos), sin costo adicional en la mayoria de los planes.",
+    question: "¿Que incluye la cobertura familiar?",
+    answer: "Conyuge e hijos dependientes hasta 25 anos pueden acceder al mismo beneficio. Cada miembro tiene su propio perfil privado.",
   },
   {
-    q: "Cuanto tarda la implementacion?",
-    a: "El proceso completo lleva aproximadamente 2 semanas: desde la configuracion hasta el onboarding de los empleados con materiales y soporte dedicado.",
+    question: "¿Cuanto tarda la implementacion?",
+    answer: "El proceso completo toma aproximadamente 2 semanas, incluyendo configuracion tecnica, materiales de comunicacion interna y capacitacion del equipo de RRHH.",
   },
   {
-    q: "Que pasa si alguien necesita ayuda urgente?",
-    a: "Contamos con protocolos de crisis y derivacion inmediata. Ademas, nuestro equipo de soporte esta disponible 24/7 para situaciones de urgencia.",
+    question: "¿Que pasa si un empleado necesita ayuda urgente?",
+    answer: "Contamos con linea de crisis 24/7 atendida por profesionales capacitados. Ademas, nuestro sistema detecta senales de alerta para activar protocolos de emergencia.",
   },
   {
-    q: "Como se asignan los terapeutas?",
-    a: "Cada usuario puede elegir su terapeuta segun especialidad, enfoque y disponibilidad. Tambien ofrecemos un matching automatico basado en preferencias.",
-  },
-  {
-    q: "Que tipo de reportes recibe RRHH?",
-    a: "Un dashboard con metricas agregadas: tasa de adopcion, satisfaccion, frecuencia de uso y tendencias. Todo anonimo, sin datos individuales.",
+    question: "¿Como se asignan los terapeutas?",
+    answer: "Los usuarios pueden elegir su terapeuta segun especialidad, idioma, horario y enfoque pastoral. Tambien pueden cambiar de profesional en cualquier momento.",
   },
 ]
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="py-20 px-6 bg-[var(--warm-bg)]">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-[var(--navy)] text-center">
-          Preguntas frecuentes
-        </h2>
-        <p className="mt-4 text-gray-600 text-center text-lg">
-          Todo lo que necesitas saber antes de empezar
-        </p>
+    <section id="faq" className="py-24 px-6">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-primary mb-4">
+            <span className="w-5 h-0.5 bg-primary rounded" />
+            Preguntas frecuentes
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground text-balance">
+            Resolvemos tus dudas
+          </h2>
+        </div>
 
-        <div className="mt-12 space-y-2">
-          {faqs.map((faq, i) => (
+        <div className="space-y-3">
+          {faqs.map((faq, index) => (
             <div
-              key={i}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+              key={index}
+              className={cn(
+                "border rounded-2xl overflow-hidden transition-all duration-300",
+                openIndex === index 
+                  ? "border-primary/30 shadow-lg shadow-primary/5" 
+                  : "border-border hover:border-primary/20"
+              )}
             >
               <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left"
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full flex items-center justify-between p-6 text-left bg-card hover:bg-secondary/50 transition-colors"
               >
-                <span className="font-medium text-[var(--navy)] pr-4">{faq.q}</span>
-                <ChevronDown
-                  className={cn(
-                    "w-5 h-5 text-gray-400 shrink-0 transition-transform duration-200",
-                    openIndex === i && "rotate-180"
-                  )}
-                />
-              </button>
-              {openIndex === i && (
-                <div className="px-5 pb-5 -mt-1">
-                  <p className="text-sm text-gray-600 leading-relaxed">{faq.a}</p>
+                <span className="font-semibold text-foreground pr-4">
+                  {faq.question}
+                </span>
+                <div className={cn(
+                  "w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300",
+                  openIndex === index 
+                    ? "bg-primary rotate-180" 
+                    : "bg-secondary"
+                )}>
+                  <ChevronDown className={cn(
+                    "w-4 h-4 transition-colors",
+                    openIndex === index ? "text-primary-foreground" : "text-muted-foreground"
+                  )} />
                 </div>
-              )}
+              </button>
+              <div className={cn(
+                "overflow-hidden transition-all duration-300",
+                openIndex === index ? "max-h-48" : "max-h-0"
+              )}>
+                <p className="px-6 pb-6 text-muted-foreground leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
             </div>
           ))}
         </div>
